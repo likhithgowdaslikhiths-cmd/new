@@ -44,6 +44,8 @@ document.addEventListener('DOMContentLoaded', function () {
       if (!dismissed) {
         setTimeout(function () {
           overlay.classList.add('show');
+          // Auto-close popup after 2 seconds (2000ms)
+          setTimeout(closePopup, 2000);
         }, 12000);
       }
     } catch (err) { /* localStorage unavailable — skip popup */ }
